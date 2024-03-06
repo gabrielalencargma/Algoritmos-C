@@ -5,32 +5,52 @@
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
-	int i;
-	float av1, av2, semestre[1], media;
+	int qtdAvs, i;
+	float semestre1, semestre2, mediaFinal;
 	
-	for(i=0; i<=1; i++) {
-		printf("Digite a nota da primeira avalia��o: ");
-		scanf("%f", &av1);
-		
-		printf("Digite a nota da segunda avalia��o: ");
-		scanf("%f", &av2);
-		
-		semestre[i] = (av1 + av2) / 2;
+	printf("Quantas avaliações são realizadas por semestre? ");
+	scanf("%d", &qtdAvs);
+	
+	float av[qtdAvs];
+	
+	// Cálculo da média do primeiro semestre
+	printf("\nPrimeiro semestre\n");
+	for(i=0; i<qtdAvs; i++) {
+	    printf("Digite a nota da %dª avaliação: ", i + 1);
+    	scanf("%f", &av[i]);
+    	semestre1 += av[i];
+    	
+    	if(i == (qtdAvs - 1)) {
+    	    semestre1 /= qtdAvs;
+    	}
 	}
 	
-	media = (semestre[0] + semestre[1]) / 2;
+    // Cálculo da média do segundo semestre
+    printf("\nSegundo semestre\n");
+	for(i=0; i<qtdAvs; i++) {
+	    printf("Digite a nota da %dª avaliação : ", i + 1);
+    	scanf("%f", &av[i]);
+    	semestre2 += av[i];
+    	
+    	if(i == (qtdAvs - 1)) {
+    	    semestre2 /= qtdAvs;
+    	}
+	}
 	
-	system("cls");
+	// Cálculo da média final
+	mediaFinal = (semestre1 + semestre2) / 2;
 	
-	printf("M�dia do primeiro semestre: %.1f \n", semestre[0]);
-	printf("M�dia do segundo semestre: %.1f \n", semestre[1]);
-	printf("M�dia final: %.1f \n", media);
-	printf("--------------------------------\n");
+	system("clear");
 	
-	if(media < 6) {
-		printf("Voc� est� reprovado!");
+	// Print dos resultados
+	printf("Média do primeiro semestre: %.1f \n", semestre1);
+	printf("Média do segundo semestre: %.1f \n", semestre2);
+	printf("Média final: %.1f \n\n", mediaFinal);
+	
+	if(mediaFinal < 6) {
+		printf("Você está reprovado!");
 	} else {
-		printf("Voc� est� aprovado!");
+		printf("Você está aprovado!");
 	}
 
 	return 0;
