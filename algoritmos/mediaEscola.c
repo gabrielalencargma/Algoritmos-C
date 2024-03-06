@@ -16,25 +16,25 @@ int main() {
 	// Cálculo da média do primeiro semestre
 	printf("\nPrimeiro semestre\n");
 	for(i=0; i<qtdAvs; i++) {
-	    printf("Digite a nota da %dª avaliação: ", i + 1);
-    	scanf("%f", &av[i]);
-    	semestre1 += av[i];
+		printf("Digite a nota da %dª avaliação: ", i + 1);
+    		scanf("%f", &av[i]);
+    		semestre1 += av[i];
     	
-    	if(i == (qtdAvs - 1)) {
-    	    semestre1 /= qtdAvs;
-    	}
+    		if(i == (qtdAvs - 1)) {
+			semestre1 /= qtdAvs;
+    		}
 	}
 	
-    // Cálculo da média do segundo semestre
-    printf("\nSegundo semestre\n");
+	// Cálculo da média do segundo semestre
+	printf("\nSegundo semestre\n");
 	for(i=0; i<qtdAvs; i++) {
-	    printf("Digite a nota da %dª avaliação : ", i + 1);
-    	scanf("%f", &av[i]);
-    	semestre2 += av[i];
-    	
-    	if(i == (qtdAvs - 1)) {
-    	    semestre2 /= qtdAvs;
-    	}
+		printf("Digite a nota da %dª avaliação : ", i + 1);
+    		scanf("%f", &av[i]);
+    		semestre2 += av[i];
+    		
+    		if(i == (qtdAvs - 1)) {
+			semestre2 /= qtdAvs;
+    		}
 	}
 	
 	// Cálculo da média final
