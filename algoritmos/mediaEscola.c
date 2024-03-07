@@ -13,7 +13,7 @@ int main() {
 	
 	float av[qtdAvs];
 	
-	// Cálculo da média do primeiro semestre
+	// Cálculo da média do primeiro semestre.
 	printf("\nPrimeiro semestre\n");
 	for(i=0; i<qtdAvs; i++) {
 	    printf("Digite a nota da %dª avaliação: ", i + 1);
@@ -25,7 +25,7 @@ int main() {
     	}
 	}
 	
-    // Cálculo da média do segundo semestre
+    // Cálculo da média do segundo semestre.
     printf("\nSegundo semestre\n");
 	for(i=0; i<qtdAvs; i++) {
 	    printf("Digite a nota da %dª avaliação : ", i + 1);
@@ -37,20 +37,20 @@ int main() {
     	}
 	}
 	
-	// Cálculo da média final
+	// Cálculo da média final.
 	mediaFinal = (semestre1 + semestre2) / 2;
 	
 	system("clear");
 	
-	// Print dos resultados
+	// Print dos resultados.
 	printf("Média do primeiro semestre: %.1f \n", semestre1);
 	printf("Média do segundo semestre: %.1f \n", semestre2);
 	printf("Média final: %.1f \n\n", mediaFinal);
 	
-	if(mediaFinal < 6) {
-		printf("Você está reprovado!");
-	} else {
+	if(mediaFinal > 5) {
 		printf("Você está aprovado!");
+	} else {
+		printf("Você está reprovado!");
 	}
 
 	return 0;

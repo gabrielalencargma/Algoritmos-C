@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
 
 int main(){
@@ -7,15 +6,15 @@ int main(){
 	
 	int num1;
 	
-	printf("Digite o primeiro número: ");
+	printf("Digite um nÃºmero: ");
 	scanf("%i", &num1);
 	
 	if(num1 > 10) {
-		printf("O número é maior que 10");
+		printf("O nÃºmero Ã© maior que 10.");
 	} else if(num1 == 10) {
-		printf("O número é igual a 10");
+		printf("O nÃºmero Ã© igual a 10.");
 	} else {
-		printf("O número é menor que 10");
+		printf("O nÃºmero Ã© menor que 10.");
 	}
 	
 	return 0;

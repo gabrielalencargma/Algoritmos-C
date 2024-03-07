@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
 
 int main() {
@@ -7,13 +6,14 @@ int main() {
 	
 	int num;
 	
-	printf("Digite um n�mero: ");
+	printf("Digite um número: ");
 	scanf("%d", &num);
 	
+	// Se o resto da divisão for 0, o número informado é par.
 	if(num % 2 == 0) {
-		printf("O n�mero %d � par!", num);
+		printf("O número %d é par!", num);
 	} else {
-		printf("O n�mero %d � impar!", num);
+		printf("O número %d é impar!", num);
 	}
 
 	return 0;

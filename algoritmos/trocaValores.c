@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
 
 int main(){
@@ -7,23 +6,20 @@ int main(){
 	
 	int n1, n2, temp;
 	
-	printf("Digite o primeiro n�mero: ");
+	printf("Digite o valor de n1: ");
 	scanf("%i", &n1);
 	
-	printf("Digite o segundo n�mero: ");
+	printf("Digite o valor de n2: ");
 	scanf("%i", &n2);
 	
-	printf("---------------------------\n");
-	printf("Primeiro valor: %d \n", n1);
-	printf("Segundo valor: %d \n", n2);
-	printf("\n");
-	
+	// A váriavel temp guardará o valor de n1, para que n1 receba o valor de n2 e, em seguida, n2 receba o valor de temp.
 	temp = n1;
 	n1 = n2;
 	n2 = temp;
 	
-	printf("Primeiro valor trocado: %i \n", n1);
-	printf("Segundo valor trocado: %i", n2);
+	// Print das váriaveis após a troca.
+	printf("n1: %i \n", n1);
+	printf("n2: %i", n2);
 	
 	return 0;
 }
