@@ -1,14 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
 
-void calculo_imc() {
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
 	float peso, altura, imc;
 
-  	printf("Digite seu peso (em kgs):\n");
+  	printf("Digite o peso (em quilos):\n");
   	scanf("%f", &peso);
 
-  	printf("\nDigite sua altura (em metros):\n");
+  	printf("\nDigite a altura (em metros):\n");
   	scanf("%f", &altura);
 
   	imc = peso / (altura * altura);
@@ -26,14 +27,6 @@ void calculo_imc() {
 	} else if(imc >= 40.0) {
 		printf("\nStatus: Obesidade grau 3");
 	}
-}
-
-int main() {
-	setlocale(LC_ALL, "Portuguese");
-	
-	printf("Bem-vindo ao calculador de IMC!\n\n");
-	
-	calculo_imc();
 
 	return 0;
 }

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
 
 int main(){
@@ -7,7 +6,7 @@ int main(){
 	
 	float salario, novoSalario;
 	
-	printf("Digite o sal·rio do funcion·rio: ");
+	printf("Digite o sal√°rio do funcion√°rio: ");
 	scanf("%f", &salario);
 	
 	if (salario <= 2000) {
@@ -16,7 +15,7 @@ int main(){
 		novoSalario = salario * 1.10;
 	}
 	
-	printf("O sal·rio aumentou de %.2f reais para %.2f reais.", salario, novoSalario);
+	printf("O sal√°rio aumentou de %.2f reais para %.2f reais.", salario, novoSalario);
 	
 	return 0;
 }

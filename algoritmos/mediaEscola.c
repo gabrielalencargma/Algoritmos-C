@@ -48,9 +48,9 @@ int main() {
 	printf("Média final: %.1f \n\n", mediaFinal);
 	
 	if(mediaFinal > 5) {
-		printf("Você está aprovado!");
+		printf("Aprovado!");
 	} else {
-		printf("Você está reprovado!");
+		printf("Reprovado!");
 	}
 
 	return 0;
