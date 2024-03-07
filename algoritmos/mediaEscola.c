@@ -25,8 +25,8 @@ int main() {
     		}
 	}
 	
-    // Cálculo da média do segundo semestre.
-    printf("\nSegundo semestre\n");
+	// Cálculo da média do segundo semestre.
+	printf("\nSegundo semestre\n");
 	for(i=0; i<qtdAvs; i++) {
 		printf("Digite a nota da %dª avaliação : ", i + 1);
     		scanf("%f", &av[i]);
