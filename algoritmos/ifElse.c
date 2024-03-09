@@ -7,15 +7,15 @@ int main(){
 	
 	int num1;
 	
-	printf("Digite um nÃºmero: ");
+	printf("Digite um número: ");
 	scanf("%i", &num1);
 	
 	if(num1 > 10) {
-		printf("O nÃºmero Ã© maior que 10. \n");
+		printf("O número é maior que 10. \n");
 	} else if(num1 == 10) {
-		printf("O nÃºmero Ã© igual a 10. \n");
+		printf("O número é igual a 10. \n");
 	} else {
-		printf("O nÃºmero Ã© menor que 10. \n");
+		printf("O número é menor que 10. \n");
 	}
 	
 	system("pause");

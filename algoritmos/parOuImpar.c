@@ -7,14 +7,14 @@ int main() {
 	
 	int num;
 	
-	printf("Digite um nÃºmero: ");
+	printf("Digite um número: ");
 	scanf("%d", &num);
 	
-	// Se o resto da divisÃ£o for 0, o nÃºmero informado Ã© par.
+	// Se o resto da divisão for 0, o número informado é par.
 	if(num % 2 == 0) {
-		printf("O nÃºmero %d Ã© par! \n", num);
+		printf("O número %d é par! \n", num);
 	} else {
-		printf("O nÃºmero %d Ã© impar! \n", num);
+		printf("O número %d é impar! \n", num);
 	}
 
 	system("pause");

@@ -8,15 +8,15 @@ int main() {
 	int qtdAvs, i;
 	float semestre1, semestre2, mediaFinal;
 	
-	printf("Quantas avaliaÃ§Ãµes sÃ£o realizadas por semestre? ");
+	printf("Quantas avaliações são realizadas por semestre? ");
 	scanf("%d", &qtdAvs);
 	
 	float av[qtdAvs];
 	
-	// CÃ¡lculo da mÃ©dia do primeiro semestre.
+	// Cálculo da média do primeiro semestre.
 	printf("\nPrimeiro semestre\n");
 	for(i=0; i<qtdAvs; i++) {
-		printf("Digite a nota da %dÂª avaliaÃ§Ã£o: ", i + 1);
+		printf("Digite a nota da %dª avaliação: ", i + 1);
     		scanf("%f", &av[i]);
     		semestre1 += av[i];
     	
@@ -25,10 +25,10 @@ int main() {
     		}
 	}
 	
-	// CÃ¡lculo da mÃ©dia do segundo semestre.
+	// Cálculo da média do segundo semestre.
 	printf("\nSegundo semestre\n");
 	for(i=0; i<qtdAvs; i++) {
-		printf("Digite a nota da %dÂª avaliaÃ§Ã£o : ", i + 1);
+		printf("Digite a nota da %dª avaliação : ", i + 1);
     		scanf("%f", &av[i]);
     		semestre2 += av[i];
     		
@@ -37,7 +37,7 @@ int main() {
     		}
 	}
 	
-	// CÃ¡lculo da mÃ©dia final.
+	// Cálculo da média final.
 	mediaFinal = (semestre1 + semestre2) / 2;
 	
 	system("cls");
@@ -49,9 +49,9 @@ int main() {
 		printf("Reprovado! \n\n");
 	}
 
-	printf("MÃ©dia do primeiro semestre: %.1f \n", semestre1);
-	printf("MÃ©dia do segundo semestre: %.1f \n", semestre2);
-	printf("MÃ©dia final: %.1f \n", mediaFinal);
+	printf("Média do primeiro semestre: %.1f \n", semestre1);
+	printf("Média do segundo semestre: %.1f \n", semestre2);
+	printf("Média final: %.1f \n", mediaFinal);
 
 	system("pause");
 

@@ -7,7 +7,7 @@ int main(){
 	
 	float salario, novoSalario;
 	
-	printf("Digite o sal√°rio do funcion√°rio: ");
+	printf("Digite o sal·rio do funcion·rio: ");
 	scanf("%f", &salario);
 	
 	if (salario <= 2000) {
@@ -16,7 +16,7 @@ int main(){
 		novoSalario = salario * 1.10;
 	}
 	
-	printf("O sal√°rio aumentou de R$%.2f para R$%.2f. \n", salario, novoSalario);
+	printf("O sal·rio aumentou de R$%.2f para R$%.2f. \n", salario, novoSalario);
 
 	system("pause");
 	
