@@ -19,7 +19,7 @@ int main() {
 				horas++;
 			}
 		}
-		printf("%.2d : %.2d : %.2d \n", horas, minutos, segundos);
+		printf("%.2d : %.2d : %.2d", horas, minutos, segundos);
 		sleep(1);
 	}
 	

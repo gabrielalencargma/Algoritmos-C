@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 
 int main(){
@@ -19,7 +20,9 @@ int main(){
 	
 	// Print das váriaveis após a troca.
 	printf("n1: %i \n", n1);
-	printf("n2: %i", n2);
+	printf("n2: %i \n", n2);
 	
+	system("pause");
+
 	return 0;
 }

@@ -16,17 +16,17 @@ int main() {
   	imc = peso / (altura * altura);
   	
   	if(imc <= 18.5) {
-  		printf("Status: Abaixo do normal");
+  		printf("Status: Abaixo do normal \n");
 	} else if(imc <= 24.9) {
-		printf("Status: Normal");
+		printf("Status: Normal \n");
 	} else if(imc <= 29.0) {
-		printf("Status: Sobrepeso");
+		printf("Status: Sobrepeso \n");
 	} else if(imc <= 34.9) {
-		printf("Status: Obesidade grau 1");
+		printf("Status: Obesidade grau 1 \n");
 	} else if(imc <= 39.9) {
-		printf("Status: Obesidade grau 2");
+		printf("Status: Obesidade grau 2 \n");
 	} else if(imc >= 40.0) {
-		printf("Status: Obesidade grau 3");
+		printf("Status: Obesidade grau 3 \n");
 	}
 
 	system("pause");

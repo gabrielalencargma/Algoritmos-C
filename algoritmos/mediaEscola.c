@@ -40,18 +40,20 @@ int main() {
 	// Cálculo da média final.
 	mediaFinal = (semestre1 + semestre2) / 2;
 	
-	system("clear");
+	system("cls");
 	
 	// Print dos resultados.
+	if(mediaFinal > 5) {
+		printf("Aprovado! \n\n");
+	} else {
+		printf("Reprovado! \n\n");
+	}
+
 	printf("Média do primeiro semestre: %.1f \n", semestre1);
 	printf("Média do segundo semestre: %.1f \n", semestre2);
-	printf("Média final: %.1f \n\n", mediaFinal);
-	
-	if(mediaFinal > 5) {
-		printf("Aprovado!");
-	} else {
-		printf("Reprovado!");
-	}
+	printf("Média final: %.1f \n", mediaFinal);
+
+	system("pause");
 
 	return 0;
 }
