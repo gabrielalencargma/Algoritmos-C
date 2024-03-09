@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 
 int main(){
@@ -15,7 +16,9 @@ int main(){
 		novoSalario = salario * 1.10;
 	}
 	
-	printf("O salário aumentou de %.2f reais para %.2f reais.", salario, novoSalario);
+	printf("O salário aumentou de R$%.2f para R$%.2f. \n", salario, novoSalario);
+
+	system("pause");
 	
 	return 0;
 }

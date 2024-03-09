@@ -9,7 +9,7 @@ int main() {
 	int horas = 0, minutos = 0, segundos = 0;
     
 	while(1) {
-		system("clear");
+		system("cls");
 		segundos++;
 		if(segundos == 60) {
 			segundos = 0;
@@ -20,7 +20,7 @@ int main() {
 			}
 		}
 		printf("%.2d : %.2d : %.2d \n", horas, minutos, segundos);
-		sleep(1000);
+		sleep(1);
 	}
 	
 	return 0;
