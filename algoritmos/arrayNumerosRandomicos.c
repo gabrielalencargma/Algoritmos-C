@@ -12,11 +12,12 @@ int main() {
 	
 	for(i = 0; i < 5; i++) {
 		for(j = 0; j < 5; j++) {
-			array[i][j] = (rand() % 100) + 1;
+			array[i][j] = (rand() % 100);
 			if(array[i][j] < 10) {
-				printf(" ");
+				printf("0%d ", array[i][j]);
+			} else {
+				printf("%d ", array[i][j]);
 			}
-			printf("%d ", array[i][j]);
 		}
 		printf("\n");
 	}
