@@ -7,20 +7,24 @@ char escolha;
 
 void aveNaoVoadora() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle vive em regiões tropicais? (s/n) \n");
 		scanf(" %c", &escolha);
 			
 		if(escolha == 's' || escolha == 'S') {
-			printf("\nVocê pensou em um avestruz!");
+			printf("\nVocê pensou em um avestruz! \n");
+            system("pause");
 		}
 		else if(escolha == 'n' || escolha == 'N') {
 			printf("\nEle vive em regiões polares? (s/n) \n");
 			scanf(" %c", &escolha);
 			
 			if(escolha == 's' || escolha == 'S') {
-				printf("\nVocê pensou em um pinguim!");
+				printf("\nVocê pensou em um pinguim! \n");
+                system("pause");
 			}
 			else if(escolha == 'n' || escolha == 'N') {
 				printf("\nNão compreendi, responda novamente...\n");
@@ -32,8 +36,10 @@ void aveNaoVoadora() {
 
 void ave() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle voa? (s/n) \n");
 		scanf(" %c", &escolha);
 			
@@ -45,14 +51,16 @@ void ave() {
 			scanf(" %c", &escolha);
 		
 			if(escolha == 's' || escolha == 'S') {
-				printf("\nVocê pensou em um pato!");
+				printf("\nVocê pensou em um pato! \n");
+                system("pause");
 			}
 			else if(escolha == 'n' || escolha == 'N') {
 				printf("\nEle é de rapina? (s/n) \n");
 				scanf(" %c", &escolha);
 				
 				if(escolha == 's' || escolha == 'S') {
-					printf("\nVocê pensou em uma águia!");
+					printf("\nVocê pensou em uma águia! \n");
+                    system("pause");
 				}
 				else if(escolha == 'n' || escolha == 'N') {
 					printf("\nNão compreendi, responda novamente...\n");
@@ -65,27 +73,32 @@ void ave() {
 
 void reptil() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle tem casco? (s/n) \n");
 		scanf(" %c", &escolha);
 	
 		if(escolha == 's' || escolha == 'S') {
-			printf("\nVocê pensou em uma tartatuga!");
+			printf("\nVocê pensou em uma tartatuga! \n");
+            system("pause");
 		}		
 		else if(escolha == 'n' || escolha == 'N') {
 			printf("\nEle tem patas? (s/n) \n");
 			scanf(" %c", &escolha);
 					
 			if(escolha == 'n' || escolha == 'N') {
-				printf("\nVocê pensou em uma cobra!");
+				printf("\nVocê pensou em uma cobra! \n");
+                system("pause");
 			}
 			else if(escolha == 's' || escolha == 'S') {
 				printf("\nEle é carnívoro? (s/n) \n");
 				scanf(" %c", &escolha);
 						
 				if(escolha == 's' || escolha == 'S') {
-					printf("\nVocê pensou em um crocodilo!");
+					printf("\nVocê pensou em um crocodilo! \n");
+                    system("pause");
 				}
 				else if(escolha == 'n' || escolha == 'N') {
 					printf("\nNão compreendi, responda novamente...\n");
@@ -99,20 +112,24 @@ void reptil() {
 
 void quadrupede() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle é carnívoro? (s/n) \n");
 		scanf(" %c", &escolha);
 			
 		if(escolha == 's' || escolha == 'S') {
-			printf("\nVocê pensou em um leão!");
+			printf("\nVocê pensou em um leão! \n");
+            system("pause");
 		} 
 		else if(escolha == 'n' || escolha == 'N') {
 			printf("\nEle é herbívoro? (s/n) \n");
 			scanf(" %c", &escolha);
 				
 			if(escolha == 's' || escolha == 'S') {
-				printf("\nVocê pensou em um cavalo!");
+				printf("\nVocê pensou em um cavalo! \n");
+                system("pause");
 			} 
 			else if(escolha == 'n' || escolha == 'N') {
 				printf("\nNão compreendi, responda novamente...\n");
@@ -124,20 +141,24 @@ void quadrupede() {
 
 void bipede() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle é onívoro? (s/n) \n");
 		scanf(" %c", &escolha);
 			
 		if(escolha == 's' || escolha == 'S') {
-			printf("\nVocê pensou em um homem!");
+			printf("\nVocê pensou em um homem! \n");
+            system("pause");
 		} 
 		else if(escolha == 'n' || escolha == 'N') {
 			printf("\nEle é herbívoro? (s/n) \n");
 			scanf(" %c", &escolha);
 			
 			if(escolha == 's' || escolha == 'S') {
-				printf("\nVocê pensou em um macaco!");
+				printf("\nVocê pensou em um macaco! \n");
+                system("pause");
 			}
 			else if(escolha == 'n' || escolha == 'N') {
 				printf("\nNão compreendi, responda novamente...\n");
@@ -149,8 +170,10 @@ void bipede() {
 
 void mamifero() {
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("\nEle é quadrúpede? (s/n) \n");
 		scanf(" %c", &escolha);
 		
@@ -169,14 +192,16 @@ void mamifero() {
 				scanf(" %c", &escolha);
 			
 				if(escolha == 's' || escolha == 'S') {
-					printf("\nVocê pensou em um morcego!");
+					printf("\nVocê pensou em um morcego! \n");
+                    system("pause");
 				} 
 				else if(escolha == 'n' || escolha == 'N') {
 					printf("\nEle nada? (s/n) \n");
 					scanf(" %c", &escolha);
 				
 					if(escolha == 's' || escolha == 'S') {
-						printf("\nVocê pensou em uma baleia!");
+						printf("\nVocê pensou em uma baleia! \n");
+                        system("pause");
 					}
 					else if(escolha == 'n' || escolha == 'N') {
 						printf("\nNão compreendi, responda novamente...\n");
@@ -189,10 +214,11 @@ void mamifero() {
 }
 
 void animal() {
-	system("cls");
 	repetir = 1;
+
 	while(repetir) {
 		repetir = 0;
+
 		printf("Seu animal é um mamífero? (s/n) \n");
 		scanf(" %c", &escolha);
 		
@@ -229,8 +255,8 @@ int main() {
         repetir = 0;
 
         printf("Jogo da Adivinhação \n\n");
-	    printf("Iniciar - (1) \n");
-	    printf("Sair - (0) \n\n");
+	    printf("[1] - Iniciar \n");
+	    printf("[0] - Sair \n\n");
 
         scanf(" %c", &escolha);
 
@@ -238,11 +264,12 @@ int main() {
 	        case '0':
 	    	    break;
 	        case '1':
+                system("cls");
 	    	    animal();	
                 break;
             default:
                 repetir = 1;
-                printf("Erro! Escolha uma das opções novamente. \n");
+                printf("\nErro! Escolha uma das opções novamente. \n");
                 system("pause");
                 break;
 	    } 
