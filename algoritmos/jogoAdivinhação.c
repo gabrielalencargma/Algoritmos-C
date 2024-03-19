@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int repetir;
+int repetir = 1;
 char escolha;
 
 void aveNaoVoadora() {
