@@ -8,7 +8,7 @@ void jogo() {
 	
 	for(i = 1; i <= 3; i++){
         printf("---------------------------\n");
-		printf("Player [%d] - [%d] Bot \n", playerPontos, botPontos);
+		printf("   Player [%d] - [%d] Bot \n", playerPontos, botPontos);
 		printf("---------------------------\n\n");
 
 		printf("[1] - Pedra \n[2] - Papel \n[3] - Tesoura\n\n");
