@@ -20,15 +20,15 @@ void checkAltura() {
 }
 
 void procAltura() {
-	printf("Como vocÃª deseja procurar? \n\n");
-	printf("[1] - Procurar pelo Ã­ndice \n[2] - Procurar pela altura \n[3] - Quero ver todas as alturas \n\n");
+	printf("Como você deseja procurar? \n\n");
+	printf("[1] - Procurar pelo índice \n[2] - Procurar pela altura \n[3] - Quero ver todas as alturas \n\n");
 	scanf(" %d", &ops);
 	
     system("cls");
 
 	switch(ops) {
 		case 1:
-			printf("Selecione o Ã­ndice para ver a altura armazenada (escolha de 0 a 19): \n");
+			printf("Selecione o índice para ver a altura armazenada (escolha de 0 a 19): \n");
 			scanf(" %d", &i);
 		
 			checkIndice();
@@ -52,7 +52,7 @@ void procAltura() {
 }
 
 void addAltura() {
-	printf("Selecione o Ã­ndice onde vocÃª deseja armazenar a altura (escolha de 0 a 19): \n");
+	printf("Selecione o índice onde você deseja armazenar a altura (escolha de 0 a 19): \n");
 	scanf(" %d", &i);
 	
 	printf("\nDigite a altura: \n");
@@ -63,7 +63,7 @@ int main () {
 	setlocale(LC_ALL, "portuguese");
 	
 	while(1){
-		printf("O que vocÃª deseja? \n\n");
+		printf("O que você deseja? \n\n");
 		printf("[1] - Adicionar uma altura \n[2] - Procurar uma altura \n\n");
 		scanf(" %d", &ops);
 		
