@@ -5,7 +5,7 @@
 int ops, i;
 float scanAltura, altura[20];
 
-//Função para checar uma altura pelo índice do vetor
+// Função para checar uma altura pelo índice no vetor
 void checkIndice() {
 	if(altura[i] == 0) {
 		printf("\naltura[%d] - Vazio", i);
@@ -14,14 +14,14 @@ void checkIndice() {
 	}
 }
 
-//Função para checar uma altura pelo seu armazenado no vetor
+// Função para checar uma altura pelo seu valor armazenado no vetor
 void checkAltura() {
 	if(altura[i] == scanAltura) {
 		printf("\naltura[%d] - %.2f", i, altura[i]);
 	}
 }
 
-//Função para escolher como vai procurar uma altura no vetor
+// Função para escolher como vai procurar uma altura no vetor
 void procAltura() {
 	printf("Como você deseja procurar? \n\n");
 	printf("[1] - Procurar pelo índice \n[2] - Procurar pela altura \n[3] - Quero ver todas as alturas \n\n");
@@ -54,12 +54,14 @@ void procAltura() {
 	}
 }
 
-//Função para adicionar o valor de uma altura ao vetor
+// Função para adicionar uma altura ao vetor
 void addAltura() {
 	printf("Selecione o índice onde você deseja armazenar a altura (escolha de 0 a 19): \n");
+	// Definindo em qual índice do vetor será armazenado
 	scanf(" %d", &i);
 	
 	printf("\nDigite a altura: \n");
+	// Definindo o valor da altura
 	scanf(" %f", &altura[i]);
 }
 
