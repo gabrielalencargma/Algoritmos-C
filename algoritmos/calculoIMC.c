@@ -13,8 +13,10 @@ int main() {
   	printf("Digite a altura (em metros): ");
   	scanf("%f", &altura);
 
+	// Atribuição do resultado do cálculo de IMC à váriavel
   	imc = peso / (altura * altura);
   	
+	// Verificação do valor da váriavel imc para decidir qual o seu status 
   	if(imc <= 18.5) {
   		printf("Status: Abaixo do normal \n");
 	} else if(imc <= 24.9) {
