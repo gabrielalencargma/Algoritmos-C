@@ -4,18 +4,18 @@
 
 float total;
 
-// Fun√ß√£o para aplicar desconto de funcion√°rio
+// FunÁ„o para aplicar desconto de funcion·rio
 void desconto_funcionario(float valor) {
 	float total = valor - (valor * 0.10);
 	printf("\nValor do desconto: R$%.2f \n", valor*0.10);
-	printf("Total √† pagar: R$%.2f \n", total);
+	printf("Total ‡ pagar: R$%.2f \n", total);
 }
 
-// Fun√ß√£o para aplicar desconto de cliente vip
+// FunÁ„o para aplicar desconto de cliente vip
 void desconto_vip(float valor) {
 	float total = valor - (valor * 0.05);
 	printf("\nValor do desconto: R$%.2f \n", valor*0.05);
-	printf("Total √† pagar: R$%.2f \n", total);
+	printf("Total ‡ pagar: R$%.2f \n", total);
 }
 
 // Menu do programa
@@ -26,18 +26,18 @@ void menu() {
 	printf("Digite o valor da compra: ");
 	scanf("%f", &valor);
 	
-	printf("\nDigite o n√∫mero de identifica√ß√£o: \n\n");
+	printf("\nDigite o n˙mero de identificaÁ„o: \n\n");
 	printf("[1] - Cliente comum \n");
-	printf("[2] - Funcion√°rio \n");
+	printf("[2] - Funcion·rio \n");
 	printf("[3] - Cliente VIP \n\n");
+	
+	scanf("%d", &id);
 
-    	scanf("%d", &id);
-
-	// Verifica√ß√£o do n√∫mero digitado para decidir se haver√° desconto e qual tipo ser√° 
+	// VerificaÁ„o do n˙mero digitado para decidir se haver· desconto e qual tipo ser· 
 	switch(id) {
 		case 1:
 			printf("\nSem desconto! \n");
-			printf("Total √† pagar: R$%.2f \n", valor);
+			printf("Total ‡ pagar: R$%.2f \n", valor);
 			break;
 		case 2:
 			desconto_funcionario(valor);
@@ -46,7 +46,7 @@ void menu() {
 			desconto_vip(valor);
 			break;
 		default:
-			printf("\nNum√©ro de identifica√ß√£o inv√°lido! \n");
+			printf("\nNumÈro de identificaÁ„o inv·lido! \n");
 			break;
 	}
 }
