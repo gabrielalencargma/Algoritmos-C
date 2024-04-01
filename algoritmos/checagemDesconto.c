@@ -24,31 +24,31 @@ void menu() {
 	float valor;
 	
 	printf("Digite o valor da compra: ");
-    scanf("%f", &valor);
+	scanf("%f", &valor);
 	
 	printf("\nDigite o número de identificação: \n\n");
-    printf("[1] - Cliente comum \n");
-    printf("[2] - Funcionário \n");
-    printf("[3] - Cliente VIP \n\n");
+	printf("[1] - Cliente comum \n");
+	printf("[2] - Funcionário \n");
+	printf("[3] - Cliente VIP \n\n");
 
-    scanf("%d", &id);
+    	scanf("%d", &id);
 
-// Verificação do número inserido para decidir se haverá desconto e de qual tipo será 
-    switch(id) {
-      case 1:
-      	printf("\nSem desconto! \n");
-        printf("Total à pagar: R$%.2f \n", valor);
-        break;
-      case 2:
-        desconto_funcionario(valor);
-        break;
-      case 3:
-        desconto_vip(valor);
-        break;
-      default:
-        printf("\nNuméro de identificação inválido! \n");
-        break;
-    }
+	// Verificação do número digitado para decidir se haverá desconto e qual tipo será 
+	switch(id) {
+		case 1:
+			printf("\nSem desconto! \n");
+			printf("Total à pagar: R$%.2f \n", valor);
+			break;
+		case 2:
+			desconto_funcionario(valor);
+			break;
+		case 3:
+			desconto_vip(valor);
+			break;
+		default:
+			printf("\nNuméro de identificação inválido! \n");
+			break;
+	}
 }
 
 int main() {
@@ -58,5 +58,5 @@ int main() {
 	
 	system("pause");
 
-    return 0;
+	return 0;
 }
