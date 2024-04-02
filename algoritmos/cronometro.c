@@ -12,18 +12,18 @@ int main() {
 	while(1) {
 		system("cls");
 		segundos++;
-		// Quando a varÃ­avel "segundos" chegar a 60 serÃ¡ zerada, e a varÃ­avel "minutos" aumentarÃ¡ em 1.
+		// Quando a varíavel "segundos" chegar a 60 será zerada, e a varíavel "minutos" aumentará em 1.
 		if(segundos == 60) {
 			segundos = 0;
 			minutos++;
-			// Quando a varÃ­avel "minutos" chegar a 60 serÃ¡ zerada, e a varÃ­avel "horas" aumentarÃ¡ em 1.
+			// Quando a varíavel "minutos" chegar a 60 será zerada, e a varíavel "horas" aumentará em 1.
 			if(minutos == 60) {
 				minutos = 0;
 				horas++;
 			}
 		}
 		printf("%.2d : %.2d : %.2d", horas, minutos, segundos);
-		// Intervalo de 1 segundo antes da repetiÃ§Ã£o do processo
+		// Intervalo de 1 segundo antes da repetição do processo
 		sleep(1);
 	}
 	
