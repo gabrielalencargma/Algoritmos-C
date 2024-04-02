@@ -8,18 +8,22 @@ int main() {
 	
 	int horas = 0, minutos = 0, segundos = 0;
     
+	// Estrutura While para fazer a contagem de segundo por segundo.
 	while(1) {
 		system("cls");
 		segundos++;
+		// Quando a varíavel "segundos" chegar a 60 será zerada, e a varíavel "minutos" aumentará em 1.
 		if(segundos == 60) {
 			segundos = 0;
 			minutos++;
+			// Quando a varíavel "minutos" chegar a 60 será zerada, e a varíavel "horas" aumentará em 1.
 			if(minutos == 60) {
 				minutos = 0;
 				horas++;
 			}
 		}
 		printf("%.2d : %.2d : %.2d", horas, minutos, segundos);
+		// Intervalo de 1 segundo antes da repetição do processo
 		sleep(1);
 	}
 	
