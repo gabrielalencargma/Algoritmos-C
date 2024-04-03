@@ -9,12 +9,14 @@ bool isProgramRunning = true;
 int chances = 3, cmp, senhaLen;
 char senha[9], senhaScan[9];
 
+// Função para bloquear temporáriamente o acesso do usuário
 void loginBloqueio() {
 	int minutos = 0, segundos = 0;
 	
-	printf("Vocï¿½ foi bloqueado por 1 minuto! Aguarde e tente novamente. \n\n");
+	printf("Você foi bloqueado por 1 minuto! Aguarde e tente novamente. \n\n");
 	system("pause");
     
+	// Estrutura while para cronometrar o tempo de bloqueio
     while(minutos < 1) {
     	system("cls");
 		segundos++;
@@ -29,6 +31,7 @@ void loginBloqueio() {
 	system("cls");
 }
 
+// Função para contabilizar quantas vezes o usuário tentou se logar
 void loginTentativas() {
 	if(chances == 1) {
 		chances = 3;
@@ -42,6 +45,7 @@ void loginTentativas() {
 	printf("Insira a sua senha: ");
 }
 
+// Função para logar com a senha cadastrada
 void login() {
 	printf("Insira a sua senha: ");
 	
@@ -55,10 +59,11 @@ void login() {
 		}
 	} while(cmp != 0);
 	
-	printf("\nVocï¿½ entrou! \n\n");
+	printf("\nVocê entrou! \n\n");
 	system("pause");
 }
 
+// Função para cadastrar uma senha no sistema
 void cadastro() {
 	printf("Insira uma nova senha com 8 digitos: ");
 	
@@ -74,16 +79,17 @@ void cadastro() {
 
 	strcpy(senha, senhaScan);
 
-	printf("\nVocï¿½ foi cadastrado! \n\n");
+	printf("\nVocê foi cadastrado! \n\n");
 	system("pause");
 	system("cls");
 }
 
+// Função para exibir o menu de escolhas disponíveis no sistema
 void menu() {
 	char escolha;
 
 	while(isProgramRunning) {
-		printf("O que vocï¿½ deseja? \n\n");
+		printf("O que você deseja? \n\n");
 		printf("[1] Entrar \n");
 		printf("[2] Cadastrar \n");
 		printf("[3] Sair \n\n");
@@ -104,7 +110,7 @@ void menu() {
 				isProgramRunning = false;
 				break;
 			default:
-				printf("\nErro! Digite uma opï¿½ï¿½o vï¿½lida. \n\n");
+				printf("\nErro! Digite uma opção válida. \n\n");
 				system("pause");
 				system("cls");
 				break;
