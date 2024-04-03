@@ -9,14 +9,14 @@ bool isProgramRunning = true;
 int chances = 3, cmp, senhaLen;
 char senha[9], senhaScan[9];
 
-// Função para bloquear temporáriamente o acesso do usuário
+// Função para bloquear temporáriamente o acesso do usuário.
 void loginBloqueio() {
 	int minutos = 0, segundos = 0;
 	
 	printf("Você foi bloqueado por 1 minuto! Aguarde e tente novamente. \n\n");
 	system("pause");
     
-	// Estrutura while para cronometrar o tempo de bloqueio
+	// Estrutura while para cronometrar o tempo de bloqueio.
     while(minutos < 1) {
     	system("cls");
 		segundos++;
@@ -31,13 +31,16 @@ void loginBloqueio() {
 	system("cls");
 }
 
-// Função para contabilizar quantas vezes o usuário tentou se logar
+// Função para contabilizar quantas vezes o usuário tentou se logar.
 void loginTentativas() {
+	// Se o número de chances for igual a 1, o valor de sua variável voltará a 3, e o usuário será bloqueado temporáriamente.
 	if(chances == 1) {
 		chances = 3;
 		system("cls");
 		loginBloqueio();
-	} else {
+	} 
+	// Senão, o número de chances será diminuido por 1.
+	else {
 		chances--;
 		printf("\nSenha incorreta! Chances restantes: %d \n\n", chances);
 	}
@@ -49,11 +52,14 @@ void loginTentativas() {
 void login() {
 	printf("Insira a sua senha: ");
 	
+	// Estrutura while que repetirá enquanto o valor de "cmp" for diferente de 0.
 	do {
 		scanf(" %s", &senhaScan);
 
+		// A varíavel "cmp" armazena o valor que a função "strcmp()" (comparação de strings) irá retornar.
 		cmp = strcmp(senha, senhaScan);
 		
+		// Se o valor de "cmp" for diferente de 0, quer dizer que as strings são diferentes. Logo, será chamada a função "loginTentativas()".
 		if(cmp != 0) {
 			loginTentativas();
 		}
@@ -63,20 +69,24 @@ void login() {
 	system("pause");
 }
 
-// Função para cadastrar uma senha no sistema
+// Função para cadastrar uma senha no programa
 void cadastro() {
 	printf("Insira uma nova senha com 8 digitos: ");
 	
+	// Estrutura while que repetirá enquanto o tamanho da senha for diferente de 8.
 	do {
 		scanf(" %s", &senhaScan);
 
+		// A variável "senhaLen" armazena o tamanho da string, obtido pela função "strlen()".
 		senhaLen = strlen(senhaScan);
 
+		// Se o tamanho da senha for diferente de 8, será pedido para que tente cadastrar a senha novamente.
 		if(senhaLen != 8) {
 			printf("\nErro! \n\nInsira uma nova senha com 8 digitos: ");
 		}
 	} while (senhaLen != 8);
 
+	// A função "strcpy()" copiará o que foi inserido na "senhaScan" para a variável "senha".
 	strcpy(senha, senhaScan);
 
 	printf("\nVocê foi cadastrado! \n\n");
@@ -84,10 +94,11 @@ void cadastro() {
 	system("cls");
 }
 
-// Função para exibir o menu de escolhas disponíveis no sistema
+// Função para exibir o menu de escolhas disponíveis no programa.
 void menu() {
 	char escolha;
 
+	// Estrutura while do menu, onde o usuário pode escolher entre entrar com senha, cadastrar uma senha, ou sair do programa.
 	while(isProgramRunning) {
 		printf("O que você deseja? \n\n");
 		printf("[1] Entrar \n");
@@ -100,6 +111,7 @@ void menu() {
 			case '1':
 				system("cls");
 				login();
+				// Se o login for bem sucedido, o programa finalizará.
 				isProgramRunning = false;
 				break;
 			case '2':
