@@ -8,19 +8,19 @@ int main(){
 	int i, qtdFunc;
 
 	printf("De quantos funcionários você deseja aumentar o salário? ");
-	// Definindo da quantidade de funcionários.
+	// Definindo a quantidade de funcionários.
 	scanf(" %d", &qtdFunc);
 
-	// Definindo o tamanho do vetor salario pela quantidade de funcionários.
+	// Definindo o tamanho do vetor "salario" com base na quantidade de funcionários.
 	float salario[qtdFunc];
 	
-	// Estrutura de repetição para definir o salário de cada funcionário.
+	// Estrutura for para definir o salário de cada funcionário.
 	for (i=0; i<qtdFunc; ++i) {
 		printf("Digite o salário do funcionário %d: ", i + 1);
 		scanf(" %f", &salario[i]);
 	}
 	
-	// Estrutura de repetição para aumentar o sálario de cada funcionário
+	// Estrutura for para aumentar o sálario de cada funcionário.
 	for (i=0; i<qtdFunc; ++i) {
 		// Se o salário for menor que 2000 reais, havéra um aumento de 30%. Senão, haverá um aumento de 10%.
 		if (salario[i] <= 2000){
