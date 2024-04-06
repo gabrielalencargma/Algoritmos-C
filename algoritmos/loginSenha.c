@@ -5,7 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 
-bool isProgramRunning = true;
+bool estaRodando = true;
 int chances = 3, cmp, senhaLen;
 char senha[9], senhaScan[9];
 
@@ -94,12 +94,12 @@ void cadastro() {
 	system("cls");
 }
 
-// Função para exibir o menu de escolhas disponíveis no programa.
+// Função para exibir o menu do programa.
 void menu() {
 	char escolha;
 
-	// Estrutura while do menu, onde o usuário pode escolher entre entrar com senha, cadastrar uma senha, ou sair do programa.
-	while(isProgramRunning) {
+	// Estrutura while do menu, que repetirá enquanto a variável "estaRodando" for verdadeira.
+	while(estaRodando) {
 		printf("O que você deseja? \n\n");
 		printf("[1] Entrar \n");
 		printf("[2] Cadastrar \n");
@@ -112,14 +112,14 @@ void menu() {
 				system("cls");
 				login();
 				// Se o login for bem sucedido, o programa finalizará.
-				isProgramRunning = false;
+				estaRodando = false;
 				break;
 			case '2':
 				system("cls");
 				cadastro();
 				break;
 			case '3':
-				isProgramRunning = false;
+				estaRodando = false;
 				break;
 			default:
 				printf("\nErro! Digite uma opção válida. \n\n");
