@@ -5,16 +5,16 @@
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
-	int num;
+	int n;
 	
 	printf("Digite um número: ");
-	scanf("%d", &num);
+	scanf("%d", &n); // "n" recebe o número digitado pelo usuário.
 	
-	// Se o resto da divisão for 0, o número informado é par.
-	if(num % 2 == 0) {
-		printf("O número %d é par! \n", num);
+	// Se o resto da divisão for 0, "n" é par. Senão, "n" é impar.
+	if(n % 2 == 0) {
+		printf("O número %d é par! \n", n);
 	} else {
-		printf("O número %d é impar! \n", num);
+		printf("O número %d é impar! \n", n);
 	}
 
 	system("pause");
