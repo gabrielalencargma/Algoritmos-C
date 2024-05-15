@@ -10,16 +10,15 @@ int main() {
 	
 	int array[5][5], i, j;
 	
-	// Estrutura for utilizando "i" para escrever linha por linha.
+	// Estrutura for utilizando "i" para definir as linhas.
 	for(i = 0; i < 5; i++) {
-		// Estrutura for utilizando "j" para escrever nas colunas de cada linha.
+		// Estrutura for utilizando "j" para definir as colunas.
 		for(j = 0; j < 5; j++) {
-			// Definindo um número randomico para o indice da coluna e linha atual.
+			// Definindo um número randomico para o indice da coluna e linha atual, e armazenando em "array".
 			array[i][j] = (rand() % 100);
 
-			// Print do número, e caso ele seja menor que 10, será adicionado um zero à esquerda.
 			if(array[i][j] < 10) {
-				printf("0%d ", array[i][j]);
+				printf("0%d ", array[i][j]); // Print do número com um 0 à esquerda, caso ele seja menor que 10.
 			} else {
 				printf("%d ", array[i][j]);
 			}
