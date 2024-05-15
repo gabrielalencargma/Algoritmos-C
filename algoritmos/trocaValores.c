@@ -8,15 +8,14 @@ int main(){
 	int n1, n2, temp;
 	
 	printf("Digite o valor de n1: ");
-	scanf("%i", &n1);
+	scanf("%i", &n1); // "n1" recebe o valor digitado pelo usuário.
 	
 	printf("Digite o valor de n2: ");
-	scanf("%i", &n2);
+	scanf("%i", &n2); // "n2" recebe o valor digitado pelo usuário.
 	
-	// A váriavel temp guardará o valor de n1, para que n1 receba o valor de n2 e, em seguida, n2 receba o valor de temp.
-	temp = n1;
-	n1 = n2;
-	n2 = temp;
+	temp = n1; // "temp" guarda o valor de n1.
+	n1 = n2; // "n1" recebe o valor de n2.
+	n2 = temp; // "n2" recebe o valor de temp.
 	
 	// Print das váriaveis após a troca.
 	printf("n1: %i \n", n1);
