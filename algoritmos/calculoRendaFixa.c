@@ -43,7 +43,12 @@ int main(){
 	*/
 	rendBruto = investimento * pow((rent_mensal/100) + 1, prazo);
 	
+	/* Cálculo para descobrir o rendimento liquido, através da equação: investimento * (1 + rentabilidade real) ^ prazo
 	
+	   "rent_real_mensal" precisa ser convertida de porcentagem para decimal.
+
+	   pow() está fazendo a potência de "rent_real_mensal" elevado a "prazo".
+	*/
 	rendLiquido = investimento * pow((rent_real_mensal/100) + 1, prazo);
 	
 	system("cls");
