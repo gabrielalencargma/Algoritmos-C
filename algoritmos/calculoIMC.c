@@ -8,15 +8,15 @@ int main() {
 	float peso, altura, imc;
 
   	printf("Digite o peso (em quilos): ");
-  	scanf("%f", &peso);
+  	scanf("%f", &peso); // "peso" recebe o valor digitado pelo usuário.
 
   	printf("Digite a altura (em metros): ");
-  	scanf("%f", &altura);
+  	scanf("%f", &altura); // "altura" recebe o valor digitado pelo usuário.
 
-	// Atribuição do resultado do cálculo de IMC à váriavel
+	// Cálculo para descobrir o IMC.
   	imc = peso / (altura * altura);
   	
-	// Verificação do valor da váriavel imc para decidir qual o seu status 
+	// Verificação do status do IMC.
   	if(imc <= 18.5) {
   		printf("Status: Abaixo do normal \n");
 	} else if(imc <= 24.9) {
