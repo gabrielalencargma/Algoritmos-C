@@ -3,52 +3,64 @@
 #include <math.h>
 #include <locale.h>
 
+// O cálculo de renda fixa será com base em juros compostos.
+
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	
 	int prazo;
-	float investimento, taxa_anual, taxa_mensal, inflacao, inflacao_mensal, rendBruto, rendLiquido, rentabilidade, p1, p2, p3, p4;
+	float investimento, rent_anual, rent_mensal, inflacao_anual, inflacao_mensal, rendBruto, rendLiquido, rent_real_anual, rent_real_mensal;
 	
-	printf("Digite o valor que deseja investir: ");
-	scanf(" %f", &investimento);
+	printf("Digite o valor que deseja investir (apenas números): ");
+	scanf(" %f", &investimento); // "investimento" recebe o valor digitado pelo usuário.
 	
 	printf("Digite o prazo do investimento em meses: ");
-	scanf(" %d", &prazo);
+	scanf(" %d", &prazo); // "prazo" recebe o valor digitado pelo usuário.
 	
-	printf("Digite a taxa de juros anual do investimento: ");
-	scanf(" %f", &taxa_anual);
+	printf("Digite a porcentagem de rentabilidade anual do investimento (apenas números): ");
+	scanf(" %f", &rent_anual); // "rent_anual" recebe o valor digitado pelo usuário.
 	
-	printf("Digite a taxa de inflação anual: ");
-	scanf(" %f", &inflacao);
+	printf("Digite a porcentagem de inflação anual (apenas números): ");
+	scanf(" %f", &inflacao_anual); // "inflacao_anual" recebe o valor digitado pelo usuário.
 	
-	taxa_mensal = taxa_anual / 12;
-	inflacao_mensal = inflacao / 12;
+	rent_mensal = rent_anual / 12; // Cálculo para dividir o valor de "rent_anual" em meses.
+	inflacao_mensal = inflacao_anual / 12; // Cálculo para dividir o valor de "inflacao_anual" em meses.
 	
-	p1 = (taxa_mensal/100) + 1;
-	p2 = pow(p1, prazo);
+	/* Cálculo para descobrir a retabilidade real no ano, através da equação: (1 + rentabilidade) / (1 + inflação) - 1
 	
-	rendBruto = investimento * p2;
+	   O cálculo precisa utilizar valores decimais, então primeiro as váriaveis são convertidas para decimal, 
+	   depois o resultado é convertido para porcentagem novamente.
+	*/
+	rent_real_anual = ((1 + (rent_anual/100)) / (1 + inflacao_anual/100) - 1) * 100;
 	
-	rentabilidade = ((1 + (taxa_anual/100)) / (1 + inflacao/100) - 1) * 100;
-	p3 = ((rentabilidade / 100) / 12) + 1;
-	p4 = pow(p3, prazo);
+	rent_real_mensal = rent_real_anual / 12;
+
+	/* Cálculo para descobrir o rendimento bruto, através da equação: investimento * (1 + rentabilidade) ^ prazo
 	
-	rendLiquido = investimento * p4;
+	   "rent_mensal" precisa ser convertida de porcentagem para decimal.
+
+	   pow() está fazendo a potência de "rent_mensal" elevado a "prazo".
+	*/
+	rendBruto = investimento * pow((rent_mensal/100) + 1, prazo);
+	
+	
+	rendLiquido = investimento * pow((rent_real_mensal/100) + 1, prazo);
 	
 	system("cls");
 	
+	// Print dos dados sobre o investimento.
 	printf("Valor investido: R$ %.2f \n", investimento);
 	printf("Prazo do Investimento: %d meses \n", prazo);
 	printf("------------------------------------- \n");
-	printf("Taxa de Juros do Investimento (anual): %.1f %% \n", taxa_anual);
-	printf("Taxa de Juros do Investimento (mensal): %.1f %% \n", taxa_mensal);
-	printf("Inflacao (anual): %.1f %% \n", inflacao);
-	printf("Inflacao (mensal): %.1f %% \n", inflacao_mensal);
+	printf("Taxa de Juros do Investimento (anual): %.1f %% \n", rent_anual);
+	printf("Taxa de Juros do Investimento (mensal): %.1f %% \n", rent_mensal);
+	printf("inflacao_anual (anual): %.1f %% \n", inflacao_anual);
+	printf("inflacao_anual (mensal): %.1f %% \n", inflacao_mensal);
 	printf("------------------------------------- \n");
 	printf("Redimento Bruto: R$ %.2f \n", rendBruto);
 	printf("Redimento Líquido: R$ %.2f \n", rendLiquido);
-	printf("Rentabilidade Real (Anual): %.1f%% \n", rentabilidade);
-	printf("Rentabilidade Real (Mensal): %.1f%% \n", rentabilidade/12);
+	printf("Rentabilidade Real (Anual): %.1f%% \n", rent_real_anual);
+	printf("Rentabilidade Real (Mensal): %.1f%% \n", rent_real_mensal);
 
     system("pause");
 }
