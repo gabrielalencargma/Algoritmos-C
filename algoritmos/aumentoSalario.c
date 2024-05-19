@@ -13,13 +13,13 @@ int main(){
 	// Definindo o tamanho do vetor "salario" com base na quantidade de funcionários.
 	float salario[qtdFunc];
 	
-	// Estrutura for para definir o salário de cada funcionário.
+	// Estrutura for para contar os funcionários.
 	for (i=0; i<qtdFunc; ++i) {
 		printf("Digite o salário do funcionário %d: ", i + 1);
 		scanf(" %f", &salario[i]); // O salário do funcionário atual recebe o valor digitado pelo usuário.
 	}
 	
-	// Estrutura for para aumentar o sálario de cada funcionário.
+	// Estrutura for para contar os funcionários.
 	for (i=0; i<qtdFunc; ++i) {
 		// Se o salário for menor que 2000 reais, haverá um aumento de 30%. Senão, haverá um aumento de 10%.
 		if (salario[i] <= 2000){

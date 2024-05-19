@@ -18,7 +18,7 @@ int main() {
 		printf("\nQuanto foi o valor gasto? \n");
 		scanf(" %f", &val); // "val" recebe o valor digitado pelo usuário.
 		
-		total += val; // O valor de "val" é incrementado ao "total" 
+		total += val; // O valor de "val" é incrementado ao "total".
 		
 		printf("\nVocê fez mais alguma trasação? (s/n)\n");
 		scanf(" %c", &resp);

@@ -10,9 +10,9 @@ int main() {
 	
 	int array[5][5], i, j;
 	
-	// Estrutura for utilizando "i" para definir as linhas.
+	// Estrutura for para contar as linhas.
 	for(i = 0; i < 5; i++) {
-		// Estrutura for utilizando "j" para definir as colunas.
+		// Estrutura for para contar as colunas.
 		for(j = 0; j < 5; j++) {
 			// Definindo um número randomico para o indice da coluna e linha atual, e armazenando em "array".
 			array[i][j] = (rand() % 100);
