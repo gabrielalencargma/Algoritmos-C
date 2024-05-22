@@ -22,7 +22,7 @@ int main() {
 		
 		printf("\nVocê fez mais alguma trasação? (s/n)\n");
 		scanf(" %c", &resp);
-	} while(resp == 'S' || resp == 's'); // Enquanto houver mais transações, a estrutura repetirá.
+	} while(resp == 'S' || resp == 's'); // Enquanto houver mais transações, o processo repetirá.
 
 	system("cls");
 	
