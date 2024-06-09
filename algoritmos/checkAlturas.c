@@ -7,7 +7,7 @@ float scanAltura, altura[20];
 
 // Função para checar uma altura pelo índice no vetor.
 void checkIndice() {
-	// Se o valor no índice atual de "altura[]" for 0, quer dizer que ele está vazio. Senão, será feito o print da altura armazenada.  
+	// Se o valor no índice escolhido for 0, quer dizer que ele está vazio. Senão, será feito o print da altura armazenada nele.  
 	if(altura[i] == 0) {
 		printf("\naltura[%d] - Vazio", i);
 	} else {
@@ -17,7 +17,7 @@ void checkIndice() {
 
 // Função para checar uma altura pelo seu valor armazenado no vetor.
 void checkAltura() {
-	// Se o valor no índice atual de "altura[]" for igual ao que o usuário pediu, será feito o print da altura.
+	// Se o valor no índice atual de "altura[]" for igual a altura que usuário digitou, será feito o print dela.
 	if(altura[i] == scanAltura) {
 		printf("\naltura[%d] - %.2f", i, altura[i]);
 	}
@@ -59,7 +59,7 @@ void procAltura() {
 	}
 }
 
-// Função para adicionar uma altura ao vetor.
+// Função para adicionar uma altura no vetor.
 void addAltura() {
 	printf("Selecione o índice onde você deseja armazenar a altura (escolha de 0 a 19): \n");
 	scanf(" %d", &i); // Definindo em qual índice do vetor será armazenada a altura.
