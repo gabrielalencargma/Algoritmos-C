@@ -5,8 +5,9 @@
 int ops, i;
 float scanAltura, altura[20];
 
-// Função para checar uma altura pelo índice no vetor
+// Função para checar uma altura pelo índice no vetor.
 void checkIndice() {
+	// Se o valor no índice atual de "altura[]" for 0, quer dizer que ele está vazio. Senão, será feito o print da altura armazenada.  
 	if(altura[i] == 0) {
 		printf("\naltura[%d] - Vazio", i);
 	} else {
@@ -14,39 +15,43 @@ void checkIndice() {
 	}
 }
 
-// Função para checar uma altura pelo seu valor armazenado no vetor
+// Função para checar uma altura pelo seu valor armazenado no vetor.
 void checkAltura() {
+	// Se o valor no índice atual de "altura[]" for igual ao que o usuário pediu, será feito o print da altura.
 	if(altura[i] == scanAltura) {
 		printf("\naltura[%d] - %.2f", i, altura[i]);
 	}
 }
 
-// Função para escolher como vai procurar uma altura no vetor
+// Função para escolher como será procurada uma altura no vetor.
 void procAltura() {
 	printf("Como você deseja procurar? \n\n");
 	printf("[1] - Procurar pelo índice \n[2] - Procurar pela altura \n[3] - Quero ver todas as alturas \n\n");
-	scanf(" %d", &ops);
+	scanf(" %d", &ops); // "ops" recebe o número digitado pelo usuário.
 	
     system("cls");
 
+	// Verificação do valor de "ops" para definir o tipo de procura.
 	switch(ops) {
 		case 1:
 			printf("Selecione o índice para ver a altura armazenada (escolha de 0 a 19): \n");
-			scanf(" %d", &i);
+			scanf(" %d", &i); // Definindo o índice do vetor para procurar se há alguma altura armazenada.
 		
-			checkIndice();
+			checkIndice(); // Chamando a função "checkIndice()".
 			break;
 		case 2:
 			printf("Digite a altura: \n");
-			scanf(" %f", &scanAltura);
+			scanf(" %f", &scanAltura); // "scanAltura" recebe a altura digitada pelo usuário.
 			
+			// Estrutura for para contar os 20 espaços de altura.
 			for(i = 0; i < 20; i++) {
-				checkAltura();
+				checkAltura(); // Chamando a função "checkAltura()".
 			}
 			break;
 		case 3:
+			// Estrutura for para contar os 20 espaços de altura.
 			for(i = 0; i < 20; i++) {
-				checkIndice();
+				checkIndice(); // Chamando a função "checkIndice()".
 			}
 			break;
 		default:
@@ -54,37 +59,37 @@ void procAltura() {
 	}
 }
 
-// Função para adicionar uma altura ao vetor
+// Função para adicionar uma altura ao vetor.
 void addAltura() {
 	printf("Selecione o índice onde você deseja armazenar a altura (escolha de 0 a 19): \n");
-	// Definindo em qual índice do vetor será armazenado
-	scanf(" %d", &i);
+	scanf(" %d", &i); // Definindo em qual índice do vetor será armazenada a altura.
 	
 	printf("\nDigite a altura: \n");
-	// Definindo o valor da altura
-	scanf(" %f", &altura[i]);
+	scanf(" %f", &altura[i]); // Adicionando a altura digitada pelo usuário no índice escolhido anteriormente.
 }
 
 int main () {
 	setlocale(LC_ALL, "portuguese");
 	
+	// estrutura while para repetir a escolha de opções.
 	while(1){
 		printf("O que você deseja? \n\n");
 		printf("[1] - Adicionar uma altura \n[2] - Procurar uma altura \n\n");
-		scanf(" %d", &ops);
+		scanf(" %d", &ops); // "ops" recebe o número digitado pelo usuário.
 		
         system("cls");
 
+		// Verificação do valor de "ops" para definir qual opção escolher.
 		switch(ops) {
 			case 1:
-				addAltura();
+				addAltura(); //Chamando a função "addAltura()".
 				break;
 			case 2:
-				procAltura();
+				procAltura(); // Chamando a função "procAltura()".
 				system("pause");
 				break;
 			default:
-				exit(0);
+				exit(0); // Saindo da estrutura while e finalizando o programa.
 				break;
 		}
 		
