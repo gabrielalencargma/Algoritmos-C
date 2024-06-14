@@ -46,22 +46,22 @@ void menu() {
             printf("Digite o segundo valor: ");
             scanf(" %f", &n2);
 
-            // Decidindo a operação aritmética com base no valor de "escolha".
+            // Verificação do valor de "escolha" para definir o tipo de cálculo.
             switch(escolha) {
             case 1:
-                resultado = soma(n1, n2);
+                resultado = soma(n1, n2); // "resultado" recebe o retorno da função "soma" com os parâmetros "n1" e "n2".
                 printf("\nResultado: %.2f \n\n", resultado);
                 break;
             case 2:
-                resultado = subtracao(n1, n2);
+                resultado = subtracao(n1, n2); // "resultado" recebe o retorno da função "subtracao" com os parâmetros "n1" e "n2".
                 printf("\nResultado: %.2f \n\n", resultado);
                 break;
             case 3:
-                resultado = multiplicacao(n1, n2);
+                resultado = multiplicacao(n1, n2); // "resultado" recebe o retorno da função "multiplicacao" com os parâmetros "n1" e "n2".
                 printf("\nResultado: %.2f \n\n", resultado);
                 break;
             case 4:
-                resultado = divisao(n1, n2);
+                resultado = divisao(n1, n2); // "resultado" recebe o retorno da função "divisao" com os parâmetros "n1" e "n2".
                 printf("\nResultado: %.2f \n\n", resultado);
                 break;
             }
