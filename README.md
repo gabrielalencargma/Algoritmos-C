@@ -30,7 +30,8 @@ Para compilar e executar os algoritmos, você pode usar qualquer um dos ambiente
 4. Abra a pasta com o algoritmo desejado.
 5. Compile e execute o código pressionando a tecla F6.
 
-##Como Contribuir
+## Como Contribuir
+
 Contribuições são bem-vindas! Se você deseja adicionar novos algoritmos ou melhorar os existentes, siga estas etapas:
 
 1. **Fork:** Comece por fazer um fork deste repositório clicando no botão Fork na parte superior da página. Isso criará uma cópia do repositório em sua própria conta do GitHub.
