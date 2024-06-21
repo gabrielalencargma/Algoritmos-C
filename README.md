@@ -36,12 +36,12 @@ Contribuições são bem-vindas! Se você deseja adicionar novos algoritmos ou m
 
 1. **Fork:** Faça um fork deste repositório clicando no botão Fork na parte superior da página. Isso criará uma cópia do repositório em sua própria conta do GitHub.
    
-2. **Clone:** Clone o repositório do seu fork para a sua máquina local usando o comando (`git clone https://github.com/seu-usuario/nome-do-repositorio.git`).
+2. **Clone:** Clone o repositório do seu fork para a sua máquina local usando o comando `git clone https://github.com/seu-usuario/nome-do-repositorio.git`.
    
-3. **Branch:** Antes de fazer alterações, crie uma branch para trabalhar usando o comando (`git checkout -b nome-da-branch`)
+3. **Branch:** Antes de fazer alterações, crie uma branch para trabalhar usando o comando `git checkout -b nome-da-branch`.
    
 4. **Alterações:** Adicione ou edite arquivos no repositorio. Sinta-se à vontade para adicionar suas próprias notas, códigos ou outros materiais relevantes.
    
-5. **Commit e Push:** Faça commit das suas alterações usando o comando (`git commit -m 'nome-do-commit'`), depois faça push para a sua branch usando (`git push origin nome-da-branch`).
+5. **Commit e Push:** Faça commit das suas alterações usando o comando `git commit -m 'nome-do-commit'`, depois faça push para a sua branch usando `git push origin nome-da-branch`.
     
 6. **Pull Request:** Quando estiver satisfeito com as suas alterações, crie um Pull Request (PR) para o repositório original.
