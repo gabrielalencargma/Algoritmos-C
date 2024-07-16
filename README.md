@@ -1,4 +1,4 @@
-# Algoritmos em C
+# Sobre o Repositório
 
 Bem-vindo ao repositório de algoritmos em C! Este repositório contém um conjunto de algoritmos implementados em linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
 
