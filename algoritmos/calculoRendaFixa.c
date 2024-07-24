@@ -33,7 +33,7 @@ int main(){
 	*/
 	rent_real_anual = ((1 + (rent_anual/100)) / (1 + inflacao_anual/100) - 1) * 100;
 	
-	rent_real_mensal = rent_real_anual / 12;
+	rent_real_mensal = rent_real_anual / 12; // Cálculo para dividir o valor de "rent_real_anual" em meses.
 
 	/* Cálculo para descobrir o rendimento bruto, através da equação: investimento * (1 + rentabilidade) ^ prazo
 	
