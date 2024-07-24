@@ -8,7 +8,7 @@ int main(){
 	int i, qtdFunc;
 
 	printf("De quantos funcionários você deseja aumentar o salário? ");
-	scanf(" %d", &qtdFunc); // "qntFunc" recebe a quantidade digitada pelo usuário.
+	scanf(" %d", &qtdFunc); // "qntFunc" recebe o valor digitado pelo usuário.
 
 	// Definindo o tamanho do vetor "salario" com base na quantidade de funcionários.
 	float salario[qtdFunc];
