@@ -13,9 +13,9 @@ int main(){
 	printf("Digite o valor de n2: ");
 	scanf("%i", &n2); // "n2" recebe o valor digitado pelo usuário.
 	
-	temp = n1; // "temp" guarda o valor de n1.
-	n1 = n2; // "n1" recebe o valor de n2.
-	n2 = temp; // "n2" recebe o valor de temp.
+	temp = n1; // "temp" guarda o valor de "n1".
+	n1 = n2; // "n1" recebe o valor de "n2".
+	n2 = temp; // "n2" recebe o valor de "temp".
 	
 	// Print das váriaveis após a troca.
 	printf("n1: %i \n", n1);
