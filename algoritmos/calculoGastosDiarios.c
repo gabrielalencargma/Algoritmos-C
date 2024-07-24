@@ -11,18 +11,18 @@ int main() {
 
     printf("Digite o valor de cada transação realizada no dia. No fim, será mostrado o gasto total que você teve. \n");
 
-	// Estrutura do-while para definir o total gasto.
+	// Estrutura do-while para calcular o total gasto.
 	do {
-		qtdGastos++;
+		qtdGastos++; // Incrementando 1 no valor de "qtdGastos".
 		
 		printf("\nQuanto foi o valor gasto? \n");
 		scanf(" %f", &val); // "val" recebe o valor digitado pelo usuário.
 		
-		total += val; // O valor de "val" é incrementado ao "total".
+		total += val; // Incrementando "val" no valor de "total".
 		
 		printf("\nVocê fez mais alguma trasação? (s/n)\n");
-		scanf(" %c", &resp);
-	} while(resp == 'S' || resp == 's'); // Enquanto houver mais transações, o processo repetirá.
+		scanf(" %c", &resp); // "resp" recebe o texto digitado pelo usuário.
+	} while(resp == 'S' || resp == 's'); // Enquanto houver mais transações, a estrutura repetirá.
 
 	system("cls");
 	
