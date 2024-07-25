@@ -7,7 +7,7 @@
 void jogo() {
 	int player, bot, i, playerPontos = 0, botPontos = 0;
 	
-	// Estrutura for para cada rodada.
+	// Estrutura for para contar as rodadas.
 	for(i = 1; i <= 3; i++){
 		// Print do placar atual.
         printf("---------------------------\n");
@@ -15,12 +15,11 @@ void jogo() {
 		printf("---------------------------\n\n");
 
 		printf("[1] - Pedra \n[2] - Papel \n[3] - Tesoura\n\n");
+
         printf("Faça sua jogada: ");
-		// Definindo a escolha do jogador.
-		scanf(" %d", &player);
+		scanf(" %d", &player); // "player" recebe o número digitado pelo usuário.
 		
-		// Definindo a escolha da máquina, através do sorteio dos números 1 a 3.
-		bot = (rand() % 3) + 1;
+		bot = (rand() % 3) + 1; // A jogada do bot recebe um número randomico entre 1 e 3.
 		
 		// Verificação do resultado da rodada.
 		if(player == bot) {
@@ -58,5 +57,5 @@ int main() {
 
 	system("cls");
 
-	jogo();
+	jogo(); // Chamando a função do jogo.
 }
