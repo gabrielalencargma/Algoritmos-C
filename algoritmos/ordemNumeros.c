@@ -25,7 +25,7 @@ void crescente() {
 	for (i = 0; i < quantidade; ++i) {
 		// Estrutura for para contar os índices de "n[]" usando "j".
 	    for (j = i + 1; j < quantidade; ++j) {
-			// Se o valor do índice atual de "i" for maior que o valor do índice atual de "j"...
+			// Se o valor do índice "i" atual for maior que o valor do índice "j" atual...
 			if (n[i] > n[j]) {
             	temp =  n[i]; // "temp" guarda o valor do índice "i".
             	n[i] = n[j]; // O índice "i" recebe o valor do índice "j".
@@ -47,7 +47,7 @@ void decrescente() {
 	for (i = 0; i < quantidade; ++i) {
 		// Estrutura for para contar os índices de "n[]" usando "j".
 	    for (j = i + 1; j < quantidade; ++j) {
-			// Se o valor do índice atual de "i" for menor que o valor do índice atual de "j"...
+			// Se o valor do índice "i" atual for maior que o valor do índice "j" atual...
 			if (n[i] < n[j]) {
             	temp =  n[i]; // "temp" guarda o valor do índice "i".
             	n[i] = n[j]; // O índice "i" recebe o valor do índice "j".
