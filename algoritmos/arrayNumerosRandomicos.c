@@ -14,7 +14,7 @@ int main() {
 	for(i = 0; i < 5; i++) {
 		// Estrutura for para contar as colunas.
 		for(j = 0; j < 5; j++) {
-			// O índice atual de "array[][]" recebe um número randomico.
+			// O índice atual de "array[][]" recebe um número randomico entre 1 e 99.
 			array[i][j] = (rand() % 100);
 
 			if(array[i][j] < 10) {
