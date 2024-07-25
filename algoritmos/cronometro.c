@@ -12,14 +12,14 @@ int main() {
 	while(1) {
 		system("cls");
 		segundos++; // Incrementando 1 no valor de "segundos".
-		// Se o valor de "segundos" chegar a 60, ele será zerado e o valor de "minutos" incrementará 1.
+		// Se o valor de "segundos" chegar a 60...
 		if(segundos == 60) {
-			segundos = 0;
-			minutos++;
-			// Se o valor de "minutos" chegar a 60, ele será zerado e o valor de "horas" incrementará 1.
+			segundos = 0; // "segundos" recebe o valor 0.
+			minutos++; // Incrementando 1 no valor de "minutos".
+			// Se o valor de "minutos" chegar a 60..
 			if(minutos == 60) {
-				minutos = 0;
-				horas++;
+				minutos = 0; // "minutos" recebe o valor 0.
+				horas++; // Incrementando 1 no valor de "horas".
 			}
 		}
 		printf("%.2d : %.2d : %.2d", horas, minutos, segundos);
