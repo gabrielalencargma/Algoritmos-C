@@ -17,7 +17,7 @@ void checkIndice() {
 
 // Função para checar uma altura pelo seu valor armazenado no vetor.
 void checkAltura() {
-	// Se o valor do índice atual for igual a altura digitada pelo usuário, será feito o print dela.
+	// Se o valor do índice atual for igual a altura escolhida, será feito o print dela.
 	if(altura[i] == scanAltura) {
 		printf("\naltura[%d] - %.2f", i, altura[i]);
 	}
