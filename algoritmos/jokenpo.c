@@ -26,10 +26,10 @@ void jogo() {
 			printf("\nEmpate! \n");
 		} else if((player == 1 && bot == 3) || (player == 2 && bot == 1) || (player == 3 && bot == 2)) {
 			printf("\nVitória! \n");
-			playerPontos += 1;
+			playerPontos += 1; // Incrementando 1 no valor de "playerPontos".
 		} else {
 			printf("\nDerrota! \n");
-			botPontos += 1;
+			botPontos += 1;  // Incrementando 1 no valor de "botPontos".
 		}
 		
 		system("pause");
