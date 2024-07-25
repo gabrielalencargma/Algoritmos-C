@@ -9,37 +9,37 @@ int main() {
 	float semestre1, semestre2, mediaFinal;
 	
 	printf("Quantas avaliações são realizadas por semestre? ");
-	scanf("%d", &qtdAvs); // "qtdAvs" recebe a quantidade digitada pelo usuário.
+	scanf("%d", &qtdAvs); // "qtdAvs" recebe o valor digitado pelo usuário.
 	
-	// Definindo o tamando do vetor "av" pelo valor de "qtdAvs".
+	// Definindo o tamando do vetor "av[]" com base na quantidade de avaliações.
 	float av[qtdAvs];
 	
 	// Cálculo da média do primeiro semestre.
 	printf("\nPrimeiro semestre\n");
-	// Estrutura for para contar as atividades.
+	// Estrutura for para contar as avaliações.
 	for(i=0; i<qtdAvs; i++) {
 		printf("Digite a nota da %dª avaliação: ", i + 1);
-    		scanf("%f", &av[i]); // A atividade atual recebe a nota digitado pelo usuário.
-    		semestre1 += av[i]; // A nota da atividade atual é incrementada ao valor de "semestre1".
+    	scanf("%f", &av[i]); // A nota da avaliação atual recebe o valor digitado pelo usuário.
+    	semestre1 += av[i]; // Incrementando a nota da avaliação atual no valor de "semestre1".
 
-			// Quando a última atividade receber nota, será feito a média de "semestre1" pela quantidade total de atividades.
-    		if(i == (qtdAvs - 1)) {
+		// Se for a última avaliação, será feito o cálculo da média de "semestre1".
+    	if(i == (qtdAvs - 1)) {
 			semestre1 /= qtdAvs;
-    		}
+    	}
 	}
 	
 	// Cálculo da média do segundo semestre.
 	printf("\nSegundo semestre\n");
-	// Estrutura for para contar as atividades.
+	// Estrutura for para contar as avaliações.
 	for(i=0; i<qtdAvs; i++) {
 		printf("Digite a nota da %dª avaliação : ", i + 1);
-    		scanf("%f", &av[i]); // A atividade atual recebe a nota digitado pelo usuário.
-    		semestre2 += av[i]; // A nota da atividade atual é incrementada ao valor de "semestre2".
+    	scanf("%f", &av[i]); // A nota da avaliação atual recebe o valor digitado pelo usuário.
+    	semestre2 += av[i]; // Incrementando a nota da avaliação atual no valor de "semestre2".
     		
-			// Quando a última atividade receber nota, será feito a média de "semestre2" pela quantidade total de atividades.
-    		if(i == (qtdAvs - 1)) {
+		// Se for a última avaliação, será feito o cálculo da média de "semestre2".
+    	if(i == (qtdAvs - 1)) {
 			semestre2 /= qtdAvs;
-    		}
+    	}
 	}
 	
 	// Cálculo da média final.
