@@ -22,10 +22,10 @@ int main(){
 	// Estrutura for para contar os funcionários.
 	for (i=0; i<qtdFunc; ++i) {
 		if (salario[i] <= 2000){
-			salario[i] *= 1.30; // Aumento de 30% se o salário for menor ou igual a 2000 reais.
+			salario[i] *= 1.30; // Aumento de 30% se o salário do funcionário atual for menor ou igual a 2000 reais.
 			printf("O salário do funcionario %d aumentou para: R$%.2f \n", i + 1, salario[i]);
 		} else{
-			salario[i] *= 1.10; // Aumento de 10% se o salário não for menor ou igual 2000 reais.
+			salario[i] *= 1.10; // Aumento de 10% se o salário do funcionário atual não for menor ou igual 2000 reais.
 			printf("O salário do funcionario %d aumentou para: R$%.2f \n", i + 1, salario[i]);
 		}
 	}
