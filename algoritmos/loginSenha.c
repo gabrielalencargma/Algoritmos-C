@@ -9,7 +9,7 @@ bool estaRodando = true;
 int chances = 3, cmp, senhaLen;
 char senha[9], senhaScan[9];
 
-// Função para bloquear temporáriamente o acesso do usuário.
+// Função para bloquear o acesso temporariamente.
 void loginBloqueio() {
 	int minutos = 0, segundos = 0;
 	
@@ -19,72 +19,67 @@ void loginBloqueio() {
 	// Estrutura while para cronometrar o tempo de bloqueio.
     while(minutos < 1) {
     	system("cls");
-		segundos++;
+		segundos++; // Incrementando 1 no valor de "segundos".
 		if(segundos == 60) {
-		    segundos = 0;
-		    minutos++;
+		    segundos = 0; // "segundos" recebe o valor 0.
+		    minutos++; // Incrementando 1 no valor de "minutos".
 		}
-		printf("%.2d : %.2d \n", minutos, segundos);
-		sleep(1);
+		printf("%.2d : %.2d \n", minutos, segundos); // Print do tempo.
+		sleep(1); // pausa de 1 segundo.
 	}
 	
 	system("cls");
 }
 
-// Função para contabilizar quantas vezes o usuário tentou se logar.
+// Função para verificar as tentativas de login.
 void loginTentativas() {
-	// Se o número de chances for igual a 1, o valor de sua variável voltará a 3, e o usuário será bloqueado temporáriamente.
+	// Se a última chance de login for mal sucedida...
 	if(chances == 1) {
-		chances = 3;
+		chances = 3; // "chances" recebe o valor 3.
 		system("cls");
-		loginBloqueio();
-	} 
-	// Senão, o número de chances será diminuido por 1.
-	else {
-		chances--;
+		loginBloqueio(); // Chamando a função "loginBloqueio()".
+	} else {
+		chances--; // Diminuindo 1 no valor de "chances".
 		printf("\nSenha incorreta! Chances restantes: %d \n\n", chances);
 	}
 	
 	printf("Insira a sua senha: ");
 }
 
-// Função para logar com a senha cadastrada
+// Função para logar no sistema.
 void login() {
 	printf("Insira a sua senha: ");
 	
-	// Estrutura while que repetirá enquanto o valor de "cmp" for diferente de 0.
+	// Estrutura do-while para logar no sistema.
 	do {
-		scanf(" %s", &senhaScan);
+		scanf(" %s", &senhaScan); // "senhaScan" recebe o texto digitado pelo usuário.
 
-		// A varíavel "cmp" armazena o valor que a função "strcmp()" (comparação de strings) irá retornar.
-		cmp = strcmp(senha, senhaScan);
+		cmp = strcmp(senha, senhaScan); // "cmp" recebe o valor da comparação das senhas.
 		
-		// Se o valor de "cmp" for diferente de 0, quer dizer que as strings são diferentes. Logo, será chamada a função "loginTentativas()".
+		// Se o valor de "cmp" não for 0, quer dizer que a senha digitada é diferente da cadastrada.
 		if(cmp != 0) {
-			loginTentativas();
+			loginTentativas(); // Chamando a função "loginTentativas()".
 		}
-	} while(cmp != 0);
+	} while(cmp != 0); // Enquanto a senha for diferente, a estrutura repetirá.
 	
 	printf("\nVocê entrou! \n\n");
 	system("pause");
 }
 
-// Função para cadastrar uma senha no programa
+// Função para cadastrar a senha.
 void cadastro() {
 	printf("Insira uma nova senha com 8 digitos: ");
 	
-	// Estrutura while que repetirá enquanto o tamanho da senha for diferente de 8.
+	// Estrutura do-while para cadastrar a senha.
 	do {
-		scanf(" %s", &senhaScan);
+		scanf(" %s", &senhaScan); // "senhaScan" recebe o texto digitado pelo usuário.
 
-		// A variável "senhaLen" armazena o tamanho da string, obtido pela função "strlen()".
-		senhaLen = strlen(senhaScan);
+		senhaLen = strlen(senhaScan); // "senhaLen" recebe o tamanho da senha digitada.
 
-		// Se o tamanho da senha for diferente de 8, será pedido para que tente cadastrar a senha novamente.
 		if(senhaLen != 8) {
 			printf("\nErro! \n\nInsira uma nova senha com 8 digitos: ");
 		}
-	} while (senhaLen != 8);
+	} while (senhaLen != 8); // Enquanto o tamanho da senha não for de 8 caracteres, a estrutura repetirá.
 
 	// A função "strcpy()" copiará o que foi inserido na "senhaScan" para a variável "senha".
 	strcpy(senha, senhaScan);
@@ -94,32 +89,31 @@ void cadastro() {
 	system("cls");
 }
 
-// Função para exibir o menu do programa.
+// Menu do programa.
 void menu() {
 	char escolha;
 
-	// Estrutura while do menu, que repetirá enquanto a variável "estaRodando" for verdadeira.
+	// Estrutura while para repetir a escolha das opções enquanto "estaRodando" for verdadeiro.
 	while(estaRodando) {
 		printf("O que você deseja? \n\n");
 		printf("[1] Entrar \n");
 		printf("[2] Cadastrar \n");
 		printf("[3] Sair \n\n");
 
-		scanf(" %c", &escolha);
+		scanf(" %c", &escolha); // "escolha" recebe o número digitado pelo usuário.
 		
 		switch(escolha) {
 			case '1':
 				system("cls");
-				login();
-				// Se o login for bem sucedido, o programa finalizará.
-				estaRodando = false;
+				login(); // Chamando a função "login()".
+				estaRodando = false; // "estaRodando" fica falso.
 				break;
 			case '2':
 				system("cls");
-				cadastro();
+				cadastro(); // Chamando a função "cadastro()".
 				break;
 			case '3':
-				estaRodando = false;
+				estaRodando = false; // "estaRodando" fica falso.
 				break;
 			default:
 				printf("\nErro! Digite uma opção válida. \n\n");
@@ -133,7 +127,7 @@ void menu() {
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
-	menu();
+	menu(); // Chamando a função "menu()".
 
 	return 0;
 }
