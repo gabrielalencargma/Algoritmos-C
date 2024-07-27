@@ -1,15 +1,17 @@
 # Sobre o Repositório
 
-Bem-vindo ao meu repositório de algoritmos em C! Este repositório contém um conjunto de algoritmos implementados em linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
+Bem-vindo ao meu repositório de algoritmos em C! Este repositório contém um conjunto de algoritmos implementados na linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
 
 ## Ambiente de Desenvolvimento
 
 Para desenvolver os algoritmos, utilizei as seguintes ferramentas:
 
 - [**MinGW (Minimalist GNU for Windows)**](https://github.com/niXman/mingw-builds-binaries/releases): Um conjunto de ferramentas que oferece um ambiente de desenvolvimento completo para C/C++ no Windows;
-- [**Visual Studio Code**](https://code.visualstudio.com/): Um editor de código-fonte, utilizado em conjunto com MinGW para escrever os algoritmos em C.
+- [**Visual Studio Code**](https://code.visualstudio.com/): Um editor de código-fonte, utilizado em conjunto do MinGW para escrever os códigos.
 
-Uma outra forma de desenvolver os algoritmos seria utilizando o [Dev-C++](https://www.bloodshed.net/), um ambiente de desenvolvimento integrado (IDE) que facilita a escrita e compilação de código em C/C++. Com ele, não é necessário instalar e configurar manualmente o MinGW na máquina.
+Existem outros ambientes que também possibilitam o desenvolvimento em C, como por exemplo:
+
+- [Dev-C++](https://www.bloodshed.net/): Um ambiente de desenvolvimento integrado (IDE) que facilita a escrita e compilação de código em C/C++. Com ele, não é necessário instalar e configurar manualmente o MinGW na máquina.
 
 ## Como Compilar e Executar
 
@@ -22,7 +24,7 @@ Para compilar e executar os algoritmos, você pode usar qualquer um dos ambiente
 3. Compile o código (menu **Executar** > **Compilar**);
 4. Execute o programa (menu **Executar** > **Executar**).
 
-### Usando MinGW com Visual Studio Code
+### Usando Visual Studio Code com MinGW
 
 1. Instale o MinGW na máquina e configure ele no PATH do sistema;
 2. Abra o Visual Studio Code;
