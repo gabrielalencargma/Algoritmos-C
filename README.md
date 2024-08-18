@@ -1,6 +1,6 @@
 # Sobre o Repositório
 
-Bem-vindo! Este repositório contém um conjunto de algoritmos escritos na linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
+Seja bem-vindo! Este repositório contém um conjunto de algoritmos escritos na linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
 
 ## Ambiente de Desenvolvimento
 
