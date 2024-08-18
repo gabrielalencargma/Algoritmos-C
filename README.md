@@ -1,6 +1,6 @@
 # Sobre o Repositório
 
-Bem-vindo ao meu repositório de algoritmos em C! Este repositório contém um conjunto de algoritmos implementados na linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
+Bem-vindo! Este repositório contém um conjunto de algoritmos escritos na linguagem C, realizados durante o meu estudo em lógica e práticas de programação.
 
 ## Ambiente de Desenvolvimento
 
@@ -9,7 +9,7 @@ Para desenvolver os algoritmos, utilizei as seguintes ferramentas:
 - [**MinGW (Minimalist GNU for Windows)**](https://github.com/niXman/mingw-builds-binaries/releases): Um conjunto de ferramentas que oferece um ambiente de desenvolvimento completo para C/C++ no Windows;
 - [**Visual Studio Code**](https://code.visualstudio.com/): Um editor de código-fonte, utilizado em conjunto do MinGW para escrever os códigos.
 
-Existem outros ambientes que também possibilitam o desenvolvimento em C, como por exemplo:
+Existem outras ferramentas que também possibilitam o desenvolvimento em C, como por exemplo:
 
 - [Dev-C++](https://www.bloodshed.net/): Um ambiente de desenvolvimento integrado (IDE) que facilita a escrita e compilação de código em C/C++. Com ele, não é necessário instalar e configurar manualmente o MinGW na máquina.
 
